@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Profile Button (Top-Right Corner) -->
+    <ImageButton
+        android:id="@+id/btnProfileMenu"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:background="@color/black"
+        android:src="@drawable/picture"
+        android:contentDescription="@string/profile" />
+
+    <!-- Dropdown Button (Top-Left Corner) -->
+    <ImageButton
+        android:id="@+id/btnDropdownMenu"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:background="@color/black"
+        android:src="@drawable/dropdownmenu"
+        android:contentDescription="@string/dropdown_menu"
+        tools:ignore="PrivateResource" />
+
+    <!-- Text Header -->
+    <TextView
+        android:id="@+id/txtHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btnProfileMenu"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:text="@string/assistant_home"
+        android:layout_marginTop="32dp"
+        android:textStyle="bold" />
+
+    <!-- User List Container -->
+    <!-- Added bottom padding to leave space for Add User button -->
+
+    <!-- Add User Button -->
+    <LinearLayout
+        android:id="@+id/userListContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHeader"
+        android:layout_marginTop="92dp"
+        android:orientation="vertical"
+        android:paddingBottom="56dp" />
+
+    <Button
+        android:id="@+id/btnAddUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/black"
+        android:padding="12dp"
+        android:text="@string/add_user"
+        android:textColor="@android:color/white"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+</RelativeLayout>
